@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    android:background="@color/xanhbienlv7"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size30dp"
+            android:text="@string/DangNhap"
+            tools:ignore="SpUsage"
+            android:layout_above="@+id/lnKhungDangNhap"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/shopicon"
+            android:contentDescription="@string/TODO">
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/lnKhungDangNhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            tools:ignore="UselessParent">
+            <EditText
+                android:id="@+id/edtTenDangNhapDN"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/TenDangNhap"
+                android:padding="@dimen/size10dp"
+                android:background="@color/white"
+                android:textColorHint="@color/grey"
+                android:drawableStart="@drawable/user"
+                android:layout_margin="@dimen/size10dp"
+                android:autofillHints="username"
+                android:textColor="@color/darklv10"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edtMatKhauDN"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/MatKhau"
+                android:padding="@dimen/size10dp"
+                android:background="@color/white"
+                android:textColorHint="@color/grey"
+                android:drawableStart="@drawable/lock"
+                android:layout_margin="@dimen/size10dp"
+                android:autofillHints="password"
+                android:textColor="@color/darklv10"
+                android:password="true"
+                />
+
+            <!-- Ghi nhớ tài khoản -->
+            <CheckBox
+                android:layout_marginStart="@dimen/size20dp"
+                android:id="@+id/cbSaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saveAccount"
+                android:textStyle="bold"
+                android:textSize="@dimen/size15dp"
+                android:shadowColor="@color/honglv6"
+                tools:ignore="SpUsage" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <Button
+                    android:id="@+id/btDangNhapDN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DangNhap"
+                    android:layout_weight="1"
+                    android:background="@color/xanhlacaylv6"
+                    android:layout_margin="@dimen/size10dp"
+                    style="?android:attr/buttonBarButtonStyle" />
+                <Button
+                    android:id="@+id/btDangKyDN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DangKy"
+                    android:layout_weight="1"
+                    android:background="@color/dolv2"
+                    android:layout_margin="@dimen/size10dp"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

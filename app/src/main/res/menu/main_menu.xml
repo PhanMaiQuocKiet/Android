@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/miHome"
+            android:icon="@drawable/home_black"
+            android:title="@string/action_home"/>
+        <item
+            android:id="@+id/miRecommend"
+            android:icon="@drawable/recommand_black"
+            android:title="@string/action_recommend"
+            />
+        <item
+            android:id="@+id/miProfile"
+            android:icon="@drawable/gallery_black"
+            android:title="@string/Gallery"
+            />
+    </group>
+    <item
+        android:icon="@drawable/menu_black"
+        android:title="@string/profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="@string/about" android:id="@+id/mnAbout" android:icon="@drawable/info_black"/>
+                <item android:title="@string/LogOut" android:id="@+id/mnLogout" android:icon="@drawable/logout_black"/>
+
+            </group>
+        </menu>
+
+    </item>
+    <item
+        android:icon="@drawable/menu_black"
+        android:title="@string/communication">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="@string/Share" android:id="@+id/mnShare" android:icon="@drawable/share_black"/>
+                <item android:title="@string/Rate_us" android:id="@+id/mnRateUs" android:icon="@drawable/rate_black"/>
+
+            </group>
+        </menu>
+
+    </item>
+
+</menu>

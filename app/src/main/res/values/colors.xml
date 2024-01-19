@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="donaucanhgian">#e26d5c</color>
+    <!-- Màu Dark-->
+    <color name="darklv1">#696969</color>
+    <color name="darklv2">#545454</color>
+    <color name="darklv3">#4b4b4b</color>
+    <color name="darklv4">#454545   </color>
+    <color name="darklv5">#404040</color>
+    <color name="darklv6">#353535</color>
+    <color name="darklv7">#272727</color>
+    <color name="darklv8">#1a1a1a</color>
+    <color name="darklv9">#121212</color>
+    <color name="darklv10">#040404</color>
+    <color name="black">#FF000000</color>
+    <color name="darkltim">#360825</color>
+    <color name="darklxanhbien">#032c4d</color>
+    <color name="darklxanhla">#004540</color>
+    <color name="darklnau">#361c0e</color>
+    <color name="darkldo">#570211</color>
+    <color name="darklcam">#7e3110</color>
+
+    <!-- Màu Xám-->
+    <color name="mauxamlv1">#eeeeee</color>
+    <color name="mauxamlv2">#dddddd</color>
+    <color name="mauxamlv3">#cccccc</color>
+    <color name="mauxamlv4">#bbbbbb</color>
+    <color name="mauxamlv5">#aaaaaa</color>
+    <color name="grey">#CCC</color>
+    <!-- Màu Nâu-->
+    <color name="maunaulv1">#edc4b3</color>
+    <color name="maunaulv2">#e6b8a2</color>
+    <color name="maunaulv3">#deab90</color>
+    <color name="maunaulv4">#d69f7e</color>
+    <color name="maunaulv5">#cd9777</color>
+    <color name="maunaulv6">#c38e70</color>
+    <color name="maunaulv7">#b07d62</color>
+    <color name="maunaulv8">#9d6b53</color>
+    <color name="maunaulv9">#8a5a44</color>
+    <color name="maunaulv10">#774936</color>
+    <!-- Xanh Lá mạ -->
+    <color name="xanhlamalv1">#99e2b4</color>
+    <color name="xanhlamalv2">#88d4ab</color>
+    <color name="xanhlamalv3">#78c6a3</color>
+    <color name="xanhlamalv4">#67b99a</color>
+    <color name="xanhlamalv5">#56ab91</color>
+    <color name="xanhlamalv6">#469d89</color>
+    <color name="xanhlamalv7">#248277</color>
+    <color name="xanhlamalv8">#14746f</color>
+    <color name="xanhlamalv9">#036666</color>
+    <!-- Xanh Lá Cây -->
+    <color name="xanhlacaylv1">#ccff33</color>
+    <color name="xanhlacaylv2">#9ef01a</color>
+    <color name="xanhlacaylv3">#70e000</color>
+    <color name="xanhlacaylv4">#38b000</color>
+    <color name="xanhlacaylv5">#008000</color>
+    <color name="xanhlacaylv6">#007200</color>
+    <color name="xanhlacaylv7">#006400</color>
+    <color name="xanhlacaylv8">#004b23</color>
+    <!-- Xanh Biển -->
+    <color name="xanhbienlv1">#caf0f8</color>
+    <color name="xanhbienlv2">#ade8f4</color>
+    <color name="xanhbienlv3">#90e0ef</color>
+    <color name="xanhbienlv4">#48cae4</color>
+    <color name="xanhbienlv5">#00b4d8</color>
+    <color name="xanhbienlv6">#0096c7</color>
+    <color name="xanhbienlv7">#0077b6</color>
+    <color name="xanhbienlv8">#023e8a</color>
+    <color name="xanhbienlv9">#03045e</color>
+    <!-- Màu Tím  -->
+    <color name="mautimlv1">#dec9e9</color>
+    <color name="mautimlv2">#dac3e8</color>
+    <color name="mautimlv3">#d2b7e5</color>
+    <color name="mautimlv4">#c19ee0</color>
+    <color name="mautimlv5">#b185db</color>
+    <color name="mautimlv6">#a06cd5</color>
+    <color name="mautimlv7">#9163cb</color>
+    <color name="mautimlv8">#815ac0</color>
+    <color name="mautimlv9">#7251b5</color>
+    <color name="mautimlv10">#6247aa</color>
+
+    <!-- Hồng  -->
+    <color name="honglv1">#fae0e4</color>
+    <color name="honglv2">#f7cad0</color>
+    <color name="honglv3">#f9bec7</color>
+    <color name="honglv4">#fbb1bd</color>
+    <color name="honglv5">#ff99ac</color>
+    <color name="honglv6">#ff85a1</color>
+    <color name="honglv7">#ff7096</color>
+    <color name="honglv8">#ff5c8a</color>
+    <color name="honglv9">#ff477e</color>
+    <color name="honglv10">#ff0a54</color>
+    <!-- Màu Đỏ  -->
+    <color name="dolv1">#eaa8a8</color>
+    <color name="dolv2">#e28080</color>
+    <color name="dolv3">#e56b6b</color>
+    <color name="dolv4">#e95555</color>
+    <color name="dolv5">#ec4040</color>
+    <color name="dolv6">#ef2b2b</color>
+    <color name="de1616">#ff0a54</color>
+    <color name="dolv8">#cd0000</color>
+    <color name="dolv9">#bb0000</color>
+    <color name="dolv10">#aa0000</color>
+    <!-- Màu Vàng  -->
+    <color name="vanglv1">#ffffb7</color>
+    <color name="vanglv2">#fff8a5</color>
+    <color name="vanglv3">#fff599</color>
+    <color name="vanglv4">#fff185</color>
+    <color name="vanglv5">#ffee70</color>
+    <color name="vanglv6">#ffec5c</color>
+    <color name="vanglv7">#ffe747</color>
+    <color name="vanglv8">#ffe433</color>
+    <color name="vanglv9">#ffdd1f</color>
+    <color name="vanglv10">#ffda0a</color>
+</resources>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">BanHangLuuNiem</string>
+    <string name="TenDangNhap">Tên Đăng Nhập</string>
+    <string name="MatKhau">Mật Khẩu</string>
+    <string name="NhapLaiMatKhau">Nhập Lại Mật Khẩu</string>
+    <string name="NgaySinh">Ngày Sinh</string>
+    <string name="cmnd">Chứng Minh Nhân Dân</string>
+    <string name="Thoat">Thoát</string>
+    <string name="DongY">Đồng Ý</string>
+    <string name="DangNhap">Đăng Nhập</string>
+    <string name="DangKy">Đăng Ký</string>
+    <string name="Nu">Nữ</string>
+    <string name="Nam">Nam</string>
+    <string name="TODO">TODO</string>
+    <string name="HOME">Home</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_home">Home</string>
+    <string name="action_recommend">Contacts</string>
+    <string name="saveAccount">Lưu Thông Tin Đăng Nhập</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu">menu</string>
+
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+    <string name="todo">TODO</string>
+    <string name="Doan">doan\n</string>
+    <string name="YourName">Your Name\n</string>
+    <string name="profile">Profile</string>
+    <string name="about">About</string>
+    <string name="LogOut">LogOut\n</string>
+    <string name="Gallery">Gallery</string>
+    <string name="communication">Communication</string>
+    <string name="Share">Share</string>
+    <string name="Rate_us">Rate Us</string>
+    <string name="Shopping">ShoppingDay\n</string>
+</resources>

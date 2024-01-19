@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
++ Orientation: Huong Cua Mot Doi Tuong
+-vertical : Theo CHieu Doc.
+-horizontal: Theo CHieu Ngang
+
++Gravity: ben ngoai
+-
++Layout_Gravity: ben trong
+-
+
++width
+- Fill_parent : chieu dai toan bo man hinh
+- wrap_content : chieu dai cua text
+-match-parent : Chia ti le cho no ( Chiếm hết dao diện của cái màn hình )
+
++Text
+-"@string/.." : da duoc khai bao ben value string
+-
++TextSize
+-dp :
+
++TextColor
+- Ma Mau` :...
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.KhungDangKyActivity"
+    android:background="@color/xanhbienlv7"
+    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DangKy"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/lnKhungDangKy"
+                    >
+
+                </TextView>
+                <LinearLayout
+                    android:id="@+id/lnKhungDangKy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    >
+                        <EditText
+                            android:id="@+id/edtTenDangNhap"
+                            android:inputType="text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint="@string/TenDangNhap"
+                            android:textColorHint="@color/grey"
+                            android:padding="@dimen/size10dp"
+                            android:layout_margin="@dimen/size10dp"
+                            android:drawableStart="@drawable/user"
+                            android:drawablePadding="@dimen/size10dp"
+                            android:textColor="@color/grey"
+                            android:autofillHints="username"
+                            >
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/edtMatKhau"
+                            android:inputType="text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint="@string/MatKhau"
+                            android:textColorHint="@color/grey"
+                            android:padding="@dimen/size10dp"
+                            android:layout_margin="@dimen/size10dp"
+                            android:password="true"
+                            android:drawableStart="@drawable/lock"
+                            android:drawablePadding="@dimen/size10dp"
+                            android:autofillHints="password"
+                            android:textColor="@color/grey"
+                            />
+                        <EditText
+                            android:id="@+id/edtNhapLaiMatKhau"
+                            android:inputType="text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint="@string/NhapLaiMatKhau"
+                            android:textColorHint="@color/grey"
+                            android:padding="@dimen/size10dp"
+                            android:layout_margin="@dimen/size10dp"
+                            android:password="true"
+                            android:drawableStart="@drawable/lock"
+                            android:drawablePadding="@dimen/size10dp"
+                            android:autofillHints="password"
+                            android:textColor="@color/grey"
+
+                            />
+                        <RadioGroup
+                            android:id="@+id/rdogrGioiTinh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                                <RadioButton
+                                    android:id="@+id/rdoNam"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/Nam"
+                                    />
+
+                                <RadioButton
+                                    android:id="@+id/rdoNu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/Nu"/>
+                        </RadioGroup>
+                        <EditText
+                            android:id="@+id/edtNgaySinh"
+                            android:inputType="date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint="@string/NgaySinh"
+                            android:textColorHint="@color/grey"
+                            android:padding="@dimen/size10dp"
+                            android:layout_margin="@dimen/size10dp"
+                            android:textColor="@color/grey"
+                            android:drawableStart="@drawable/calender"
+                            android:drawablePadding="@dimen/size10dp"
+                            android:autofillHints="creditCardExpirationDate"
+                            />
+                        <EditText
+                            android:id="@+id/edtCMND"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint="@string/cmnd"
+                            android:textColorHint="@color/grey"
+                            android:padding="@dimen/size10dp"
+                            android:layout_margin="@dimen/size10dp"
+                            android:textColor="@color/grey"
+                            android:drawableStart="@drawable/cmnd2"
+                            android:drawablePadding="@dimen/size10dp"
+                            android:autofillHints="creditCardNumber"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                                <Button
+                                    android:id="@+id/btDongY"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/DongY"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/size10dp"
+                                    android:layout_margin="@dimen/size10dp"
+                                    android:background="@color/xanhlacaylv4"
+                                    style="?android:attr/buttonBarButtonStyle" />
+
+
+
+
+                                <Button
+                                    android:id="@+id/btThoat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/Thoat"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/size10dp"
+                                    android:layout_margin="@dimen/size10dp"
+                                    android:background="@color/donaucanhgian"
+                                    style="?android:attr/buttonBarButtonStyle" />
+
+                        </LinearLayout>
+                </LinearLayout>
+
+        </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
