@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/shop_background_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.BanHang"
+        tools:replace="android:icon"
         tools:targetApi="31">
         <activity android:name=".Login.KhungDangNhapActivity"
             android:exported="true">
@@ -20,11 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.HomeActivity">
+        <activity android:name=".View.HomeAdminActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="Admin">
 
         </activity>
         <activity
-            android:name=".View.HomeAdminActivity"
+            android:name=".View.HomeActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
             <!-- Các thuộc tính khác -->
         </activity>

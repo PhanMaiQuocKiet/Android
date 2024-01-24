@@ -1,3 +1,5 @@
+import org.apache.tools.ant.util.JavaEnvUtils.VERSION_1_8
+
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.androidApplication)
@@ -24,8 +26,6 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
     }
     buildToolsVersion = "34.0.0"
 }

@@ -54,8 +54,8 @@ public class KhungDangKyActivity extends AppCompatActivity {
                 } else {
                     gioiTinh = "";
                 }
-                if(TenDangNhapDK.equals("")||TenDangNhapDK.length()  <= 6){
-                    Toast toast = Toast.makeText(getApplicationContext(),"Ten Dang Nhap Dang Rong Va Phai Lon Hon 6 Ký Tự",Toast.LENGTH_SHORT);toast.show();
+                if(TenDangNhapDK.equals("")||TenDangNhapDK.length()  < 5){
+                    Toast toast = Toast.makeText(getApplicationContext(),"Ten Dang Nhap Dang Rong Va Phai Lon Hon 4 Ký Tự",Toast.LENGTH_SHORT);toast.show();
 
                 } else if (MatKhauDK.equals("") || MatKhauDK.length()  <= 6) {
                     Toast toast = Toast.makeText(getApplicationContext(),"Mật Khẩu Không Đươc Rỗng Và Phải Hơn 6 Kí Tự",Toast.LENGTH_SHORT);toast.show();
@@ -69,8 +69,8 @@ public class KhungDangKyActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(),"Hãy Chọn Giới Tính Của Bạn",Toast.LENGTH_SHORT);toast.show();
                 } else if(NgaySinhDK.equals("")){
                     Toast toast = Toast.makeText(getApplicationContext(),"bạn Chưa Nhập Ngày Sinh",Toast.LENGTH_SHORT);toast.show();
-                }else if(CMNDK.equals("") || CMNDK.length() < 12){
-                    Toast toast = Toast.makeText(getApplicationContext(),"bạn Chưa Nhập CMND Và phải lớn Hơn 12 số",Toast.LENGTH_SHORT);toast.show();
+                }else if(CMNDK.equals("") || CMNDK.length() != 12 ){
+                    Toast toast = Toast.makeText(getApplicationContext(),"bạn Chưa Nhập CMND Và là  12 số",Toast.LENGTH_SHORT);toast.show();
                 }else {
                     try {
                         DangKyNguoiDung(TenDangNhapDK,MatKhauDK,NgaySinhDK,CMNDK,gioiTinh);

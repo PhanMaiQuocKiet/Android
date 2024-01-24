@@ -15,7 +15,7 @@ import com.example.banhang.Login.*;
 import com.example.banhang.R;
 import com.google.android.material.navigation.NavigationView;
 
-public class HomeAdminActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -24,7 +24,7 @@ public class HomeAdminActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_homeadmin);
+        setContentView(R.layout.layout_customer);
         AnhXa();
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
@@ -38,33 +38,33 @@ public class HomeAdminActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int menuID = item.getItemId();
                 if (menuID == R.id.miHome) {
-                    Intent intent = new Intent(HomeAdminActivity.this, HomeAdminActivity.class);
+                    Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
                     startActivity(intent);
                     return true;
 
                 } else if (menuID == R.id.miProfile) {
-                    Toast.makeText(HomeAdminActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this, "Profile", Toast.LENGTH_SHORT).show();
                     return true;
 
                 } else if (menuID == R.id.miRecommend) {
-                    Toast.makeText(HomeAdminActivity.this, "Recommend", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this, "Recommend", Toast.LENGTH_SHORT).show();
                     return true;
 
                 }else if (menuID == R.id.mnAbout) {
-                    Toast.makeText(HomeAdminActivity.this, "mnAbout", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this, "mnAbout", Toast.LENGTH_SHORT).show();
                     return true;
 
                 }else if (menuID == R.id.mnLogout) {
-                    Intent intent = new Intent(HomeAdminActivity.this,KhungDangNhapActivity.class);
+                    Intent intent = new Intent(HomeActivity.this,KhungDangNhapActivity.class);
                     startActivity(intent);
                     return true;
 
                 }else if (menuID == R.id.mnShare) {
-                    Toast.makeText(HomeAdminActivity.this, "mnShare", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this, "mnShare", Toast.LENGTH_SHORT).show();
                     return true;
 
                 }else if (menuID == R.id.mnRateUs) {
-                    Toast.makeText(HomeAdminActivity.this, "mnRateUs", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this, "mnRateUs", Toast.LENGTH_SHORT).show();
                     return true;
 
                 }

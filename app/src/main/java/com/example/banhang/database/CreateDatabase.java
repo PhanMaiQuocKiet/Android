@@ -218,15 +218,12 @@ public class CreateDatabase extends SQLiteOpenHelper {
         return tendangnhap;
     }
 
-
-    // Phương thức để đặt vai trò cho người dùng dựa trên tên đăng nhập
-    public String setVaiTroForUser(String tenDangNhap, String vaiTro) {
+    public void setAdminRoleForUser(String tenDangNhap) {
         SQLiteDatabase db = this.getWritableDatabase();
-        //An vao button staff
-        //An Vao button Customer
+
         // Sử dụng ContentValues để chuẩn bị dữ liệu cần cập nhật
         ContentValues values = new ContentValues();
-        values.put(CreateDatabase.CL_CHUC_VU, vaiTro);
+        values.put(CreateDatabase.CL_VAI_TRO, "admin");
 
         // Cập nhật vai trò cho người dùng trong bảng DangNhapKhachHang
         db.update(
@@ -238,6 +235,45 @@ public class CreateDatabase extends SQLiteOpenHelper {
 
         // Đóng kết nối database
         db.close();
-        return CL_CHUC_VU;
+    }
+    public void setCustomerRoleForUser(String tenDangNhap) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Sử dụng ContentValues để chuẩn bị dữ liệu cần cập nhật
+        ContentValues values = new ContentValues();
+        values.put(CreateDatabase.CL_VAI_TRO, "customer");
+
+        // Cập nhật vai trò cho người dùng trong bảng DangNhapKhachHang
+        db.update(
+                TB_DANG_NHAP_KHACH_HANG,
+                values,
+                CL_TEN_DANGNHAP + " = ?",
+                new String[]{tenDangNhap}
+        );
+
+        // Đóng kết nối database
+        db.close();
+    }
+    //phuong thuc lay ra chuc vu cua nguoi dung
+    @SuppressLint("Range")
+    public String GetCLVaitro(String tendangnhap){
+        String vaiTro = null;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Query để lấy chức vụ từ cơ sở dữ liệu
+        String query = "SELECT " + CreateDatabase. CL_VAI_TRO  + " FROM " + CreateDatabase.TB_DANG_NHAP_KHACH_HANG +
+                " WHERE " + CreateDatabase.CL_TEN_DANGNHAP + " = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{tendangnhap});
+
+        // Kiểm tra xem có dữ liệu hay không
+        if (cursor.moveToFirst()) {
+            vaiTro = cursor.getString(cursor.getColumnIndex(CreateDatabase. CL_VAI_TRO ));
+        }
+
+        // Đóng cursor và database
+        cursor.close();
+        db.close();
+
+        return vaiTro;
     }
 }

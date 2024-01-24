@@ -1,25 +1,19 @@
 package com.example.banhang.Login;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 
 import com.example.banhang.R;
-import com.example.banhang.View.HeaderMenu.HeaderFragment;
-import com.example.banhang.View.HomeAdminActivity;
+import com.example.banhang.View.*;
 import com.example.banhang.database.CreateDatabase;
 
 public class KhungDangNhapActivity extends AppCompatActivity {
@@ -37,7 +31,6 @@ public class KhungDangNhapActivity extends AppCompatActivity {
         AnhXa();
 
         cbSaveAccount.setChecked(true);
-
         btDangKyDN.setOnClickListener(v -> {
             Intent intent = new Intent(KhungDangNhapActivity.this, KhungDangKyActivity.class);
             startActivity(intent);
@@ -50,6 +43,16 @@ public class KhungDangNhapActivity extends AppCompatActivity {
                 toast.show();
             } else {
                 if (checkLogin(tenDangNhap, matKhauDangNhap)) {
+                    //set admin cho tai khoản "Admin10"
+                    if (tenDangNhap.equals("Admin")){
+                        databaseHelper.setAdminRoleForUser(tenDangNhap);
+                        Toast.makeText(getApplicationContext(), "Admin", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        databaseHelper.setCustomerRoleForUser(tenDangNhap);
+                        Toast.makeText(getApplicationContext(), "customer", Toast.LENGTH_SHORT).show();
+
+                    }
                     // Lưu Thông Tin Đăng Nhập
                     SharedPreferences sharedPreferences = getSharedPreferences(thongtinluu, MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -59,14 +62,17 @@ public class KhungDangNhapActivity extends AppCompatActivity {
                     editor.putBoolean("Save", cbSaveAccount.isChecked());
                     editor.apply();
                     // Cập nhật tên đăng nhập
-
                     String matkhauDatabase = databaseHelper.getMatKhauDatabase(tenDangNhap);
                     String tenDangNhapDatabase = databaseHelper.getClTenDangnhapDatabase(tenDangNhap);
-                    if (matKhauDangNhap.equals(matkhauDatabase) && tenDangNhap.equals(tenDangNhapDatabase)) {
-                        Intent intentDangnhap = new Intent(KhungDangNhapActivity.this, HomeAdminActivity.class);
+                    if (matKhauDangNhap.equals(matkhauDatabase) && tenDangNhap.equals(tenDangNhapDatabase) && databaseHelper.GetCLVaitro(tenDangNhap).equals("customer")) {
+                        Intent intentDangnhap = new Intent(KhungDangNhapActivity.this, HomeActivity.class);
                         startActivity(intentDangnhap);
                         Toast toast = Toast.makeText(getApplicationContext(), "Đăng nhập Thành Công !", Toast.LENGTH_SHORT);
                         toast.show();
+                    }
+                    else{
+                        Intent intentDangnhapAdmin = new Intent(KhungDangNhapActivity.this, HomeAdminActivity.class);
+                        startActivity(intentDangnhapAdmin);
                     }
                 } else {
                     Toast toast;
@@ -113,4 +119,5 @@ public class KhungDangNhapActivity extends AppCompatActivity {
             edtMatKhauDN.setText(password);
         }
     }
+
 }
